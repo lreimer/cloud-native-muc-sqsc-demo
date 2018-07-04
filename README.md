@@ -85,6 +85,12 @@ $ sqsc repository list -project cloud-native-night-dev
 
 $ sqsc lb set -project cloud-native-night-dev -container lreimer/cloud-native-muc-sqsc-golang -port 9090
 $ http get http://www.production.cloud-native-night-dev.squarely.io
+
+$ sqsc repository add -project cloud-native-night-dev -build-service travis -url  https://github.com/lreimer/cloud-native-muc-sqsc-jigsaw
+$ sqsc repository list -project cloud-native-night-dev
+
+$ sqsc lb set -project cloud-native-night-dev -container lreimer/cloud-native-muc-sqsc-jigsaw -port 9000
+$ http get http://www.production.cloud-native-night-dev.squarely.io
 ```
 
 ## Working with Docker Images
