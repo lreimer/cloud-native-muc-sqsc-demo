@@ -4,6 +4,8 @@ The demo instructions for the Cloud Native Night demo with SquareScale.
 
 https://www.meetup.com/de-DE/cloud-native-muc/
 
+http://docs.squarescale.com/index.html
+
 ## Login to SquareScale
 
 ```
