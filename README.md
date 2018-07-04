@@ -25,6 +25,8 @@ $ sqsc project create -name cloud-native-night
 $ sqsc project list
 ```
 
+
+
 ## Webhook Integration
 
 ```
@@ -38,6 +40,15 @@ $ sqsc project slackbot cloud-native-night https://hooks.slack.com/services/T045
 ```
 $ sqsc repository add -project cloud-native-night-dev -build-service internal -url https://github.com/lreimer/cloud-native-muc-sqsc-nodejs
 $ sqsc repository list -project cloud-native-night-dev
+```
+
+## Working with Load Balancer
+
+```
+$ sqsc lb list -project cloud-native-night-dev
+$ sqsc lb url -project cloud-native-night-dev
+$ sqsc lb set -project cloud-native-night-dev -container lreimer/cloud-native-muc-sqsc-nodejs -port 8080
+$ http get http://www.production.cloud-native-night-dev.squarely.io
 ```
 
 ## Working with Containers
@@ -66,15 +77,6 @@ $ sqsc env get -project cloud-native-night-dev
 $ sqsc env get -project cloud-native-night-dev -container lreimer/cloud-native-muc-sqsc-nodejs
 
 $ sqsc env set -project cloud-native-night-dev MESSAGE 'Hello Cloud Native Night Demo.'
-```
-
-## Working with Load Balancer
-
-```
-$ sqsc lb list -project cloud-native-night-dev
-$ sqsc lb url -project cloud-native-night-dev
-$ sqsc lb set -project cloud-native-night-dev -container lreimer/cloud-native-muc-sqsc-nodejs -port 8080
-$ http get http://www.production.cloud-native-night-dev.squarely.io
 ```
 
 ## Working with Travis.CI
